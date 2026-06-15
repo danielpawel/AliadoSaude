@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aliado Saúde | Inteligência Estratégica em Saúde</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#000000",
+                        "on-primary-container": "#7c839b",
+                        "surface-glass": "rgba(255, 255, 255, 0.7)",
+                        "inverse-primary": "#bec6e0",
+                        "surface-container": "#f0edef",
+                        "teal-500": "#0EA5E9",
+                        "surface-bright": "#fcf8fa",
+                        "surface-container-high": "#eae7e9",
+                        "error-container": "#ffdad6",
+                        "surface": "#fcf8fa",
+                        "secondary": "#006591",
+                        "inverse-surface": "#303032",
+                        "primary-fixed": "#dae2fd",
+                        "outline": "#76777d",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e4",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "slate-400": "#94A3B8",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "background": "#fcf8fa",
+                        "secondary-fixed": "#c9e6ff",
+                        "tertiary-container": "#271901",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#98805d",
+                        "surface-container-highest": "#e4e2e4",
+                        "tertiary-fixed": "#fcdeb5",
+                        "slate-100": "#F1F5F9",
+                        "on-surface": "#1b1b1d",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#004666",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "on-secondary-fixed": "#001e2f",
+                        "deep-navy-900": "#0F172A",
+                        "inverse-on-surface": "#f3f0f2",
+                        "secondary-fixed-dim": "#89ceff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-container": "#39b8fd",
+                        "surface-dim": "#dcd9db",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#f6f3f5",
+                        "on-tertiary-fixed": "#271901",
+                        "pure-white": "#FFFFFF",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "primary-container": "#131b2e",
+                        "on-background": "#1b1b1d",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-gap": "24px",
+                        "gutter": "32px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-display": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fcf8fa; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; }
+        .hero-gradient { background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.05), transparent 40%), radial-gradient(circle at bottom left, rgba(0, 101, 145, 0.05), transparent 40%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- Header Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass border-b border-outline-variant/20 shadow-sm backdrop-blur-xl">
+<nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="flex items-center" href="#">
+<img alt="Aliado Saúde Logo" class="h-10 md:h-12 object-contain hover:scale-105 transition-transform duration-200" src="logo.png"/>
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#solucoes">Expertise</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#atuacao">Metodologia</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#resultados">Casos de Sucesso</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#sobre">Sobre Nós</a>
+</div>
+<a class="hidden md:block bg-primary text-on-primary font-body-md text-body-md px-8 py-3 rounded-xl hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg" href="#contato">
+                Falar com Especialista
+            </a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative pt-32 pb-24 md:pt-48 md:pb-40 px-gutter overflow-hidden hero-gradient">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block py-1 px-4 mb-6 bg-secondary/10 text-secondary font-label-caps text-label-caps rounded-full">
+                        ESTRATÉGIA DE ALTA PERFORMANCE
+                    </span>
+<h1 class="font-headline-display text-headline-display mb-6 tracking-tight text-primary">
+                        Inteligência Estratégica para Líderes da Saúde.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        Otimizamos recursos e impulsionamos a performance de instituições que buscam o próximo nível de eficiência e sustentabilidade no mercado hospitalar.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary font-body-md text-body-md px-10 py-4 rounded-xl flex items-center justify-center hover:scale-[1.02] transition-transform shadow-xl" href="#contato">
+                            Agendar Consultoria
+                        </a>
+<a class="bg-transparent border border-outline-variant text-primary font-body-md text-body-md px-10 py-4 rounded-xl flex items-center justify-center hover:bg-surface-container-low transition-colors" href="#solucoes">
+                            Ver Soluções
+                        </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-teal-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 transition-all duration-700"></div>
+<div class="relative rounded-3xl overflow-hidden border border-outline-variant/30 shadow-2xl">
+<img class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700" data-alt="A professional healthcare manager in a minimalist, brightly lit office environment. She is reviewing data on a tablet, projecting a look of focus and authority. The background is soft-focused with clinical white and soft navy tones, embodying a high-end corporate healthcare consultancy aesthetic with clean lines and premium light-mode lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzn82PZxCZddTUIXAvxRG8PtmuxOeioVFqjJ8OzDlsOAheJJbX1bZnZSqurp6jgYmeIkAt6bgCVwq6oR75xNxOZfF-_-jW9H7xXRMcG_6eX3dpUhHwBPtZh9Um0fYWTjYB5dZKwhUODVcpPNmETjvpdvJ-FjTcKB_kEHswgudNu2uNmz0VKKQgxqfd0E48EJwQKWU3eRGO07-vlB1wxKEuSNUZ4BKlkxyNgZ-nVY5Aa1oraVnJY2Ai7O2o3qXVl93TfSpLw9BQYckD"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Prop / Bento Grid Problems -->
+<section class="py-section-padding-desktop px-gutter bg-surface-container-lowest" id="solucoes">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Transformamos dados em decisões de alto impacto.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Identificamos as lacunas operacionais que impedem o seu crescimento sustentável.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Card 01 -->
+<div class="bg-background p-10 rounded-[32px] border border-outline-variant/30 hover:border-secondary/30 transition-all group shadow-sm hover:shadow-md">
+<div class="text-secondary font-bold text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">01.</div>
+<h3 class="font-headline-md text-headline-md mb-4">Otimização de Processos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Reduzimos ineficiências que comprometem o atendimento e os resultados financeiros da sua unidade.</p>
+</div>
+<!-- Card 02 -->
+<div class="bg-background p-10 rounded-[32px] border border-outline-variant/30 hover:border-secondary/30 transition-all group shadow-sm hover:shadow-md">
+<div class="text-secondary font-bold text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">02.</div>
+<h3 class="font-headline-md text-headline-md mb-4">Gestão Estratégica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Estruturamos a governança operacional para garantir que sua visão se torne realidade tática.</p>
+</div>
+<!-- Card 03 -->
+<div class="bg-background p-10 rounded-[32px] border border-outline-variant/30 hover:border-secondary/30 transition-all group shadow-sm hover:shadow-md">
+<div class="text-secondary font-bold text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">03.</div>
+<h3 class="font-headline-md text-headline-md mb-4">Data Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Transformamos o excesso de dados em clareza analítica para decisões baseadas em fatos.</p>
+</div>
+<!-- Card 04 -->
+<div class="bg-background p-10 rounded-[32px] border border-outline-variant/30 hover:border-secondary/30 transition-all group shadow-sm hover:shadow-md">
+<div class="text-secondary font-bold text-4xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">04.</div>
+<h3 class="font-headline-md text-headline-md mb-4">Clareza de Inovação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Trazemos a tecnologia certa e o roadmap de execução para inovar sem riscos desnecessários.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Atuação Section -->
+<section class="py-section-padding-desktop px-gutter overflow-hidden" id="atuacao">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 relative flex justify-center">
+<div class="absolute inset-0 bg-secondary/5 rounded-full blur-3xl scale-125"></div>
+<img alt="Visualização de Atuação" class="relative z-10 w-full max-w-md rounded-full shadow-2xl border-4 border-white/50" src="visualizacaoatuacao.png"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-secondary font-label-caps text-label-caps uppercase tracking-widest mb-4 block">Nossa Metodologia</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Escutamos, diagnosticamos e agimos.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Nossa atuação é presencial e consultiva. Não entregamos apenas relatórios; implementamos soluções que redesenham a jornada do paciente e a saúde financeira do negócio.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">task_alt</span>
+<span class="font-body-md text-body-md">Diagnóstico Situacional em 360 Graus</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">analytics</span>
+<span class="font-body-md text-body-md">Reestruturação de Processos Assistenciais</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">trending_up</span>
+<span class="font-body-md text-body-md">Planejamento para Expansões Críticas</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">psychology</span>
+<span class="font-body-md text-body-md">Mentoria Estratégica para Alta Gestão</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Resultados Section -->
+<section class="py-section-padding-desktop px-gutter bg-primary text-on-primary" id="resultados">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Resultados Comprovados</h2>
+<p class="font-body-lg text-body-lg text-on-primary/70 max-w-xl">
+                            Entregamos eficiência mensurável. Veja o impacto direto da nossa metodologia em instituições parceiras.
+                        </p>
+</div>
+<a class="bg-on-primary text-primary font-body-md text-body-md px-10 py-4 rounded-xl hover:bg-secondary-fixed transition-colors" href="#contato">
+                        Falar com Especialista
+                    </a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<!-- Metric Card 1 -->
+<div class="bg-pure-white/10 backdrop-blur-md p-8 rounded-[24px] flex flex-col items-center text-center hover:bg-pure-white/20 transition-colors">
+<img alt="15%" class="w-24 mb-4" src="15custos.png"/>
+<p class="font-body-md text-body-md opacity-80 leading-snug">Redução de custos em gêneros alimentícios</p>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-pure-white/10 backdrop-blur-md p-8 rounded-[24px] flex flex-col items-center text-center hover:bg-pure-white/20 transition-colors">
+<img alt="20%" class="w-24 mb-4" src="20porcento.png"/>
+<p class="font-body-md text-body-md opacity-80 leading-snug">Aumento na fidelização do corpo clínico</p>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-pure-white/10 backdrop-blur-md p-8 rounded-[24px] flex flex-col items-center text-center hover:bg-pure-white/20 transition-colors">
+<img alt="5%" class="w-24 mb-4" src="mais5porcento.png"/>
+<p class="font-body-md text-body-md opacity-80 leading-snug">Aumento no faturamento real</p>
+</div>
+<!-- Metric Card 4 -->
+<div class="bg-pure-white/10 backdrop-blur-md p-8 rounded-[24px] flex flex-col items-center text-center hover:bg-pure-white/20 transition-colors">
+<img alt="15%" class="w-24 mb-4" src="15desperdicio.png"/>
+<p class="font-body-md text-body-md opacity-80 leading-snug">Redução no desperdício de materiais</p>
+</div>
+<!-- Metric Card 5 -->
+<div class="bg-pure-white/10 backdrop-blur-md p-8 rounded-[24px] flex flex-col items-center text-center hover:bg-pure-white/20 transition-colors">
+<img alt="10%" class="w-24 mb-4" src="10porcento.png"/>
+<p class="font-body-md text-body-md opacity-80 leading-snug">Otimização na cadeia medicamentosa</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sobre Nós / Experts -->
+<section class="py-section-padding-desktop px-gutter" id="sobre">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<span class="text-secondary font-label-caps text-label-caps tracking-widest block mb-4">LIDERANÇA ESPECIALIZADA</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Conheça as Fundadoras</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-16">
+<!-- Profile Janaina -->
+<div class="group">
+<div class="overflow-hidden rounded-[40px] mb-8 shadow-xl">
+<img alt="Janaina Martins Ogando" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" src="janaina.png"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Janaina Martins Ogando</h3>
+<p class="text-secondary font-label-caps text-label-caps mb-6">CEO | Consultora Sênior</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Especialista em Gestão de Saúde com mais de 20 anos de experiência. Diretora de Práticas Assistenciais e avaliadora Qmentum, com vasta expertise em otimização de fluxos hospitalares e segurança do paciente.
+                        </p>
+</div>
+<!-- Profile Aline -->
+<div class="group">
+<div class="overflow-hidden rounded-[40px] mb-8 shadow-xl">
+<img alt="Aline Thomaz Soares" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" src="alinethomaz.png"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Aline Thomaz Soares</h3>
+<p class="text-secondary font-label-caps text-label-caps mb-6">Diretora de Projetos | Médica</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Médica com doutorado pela USP e MBA em Administração Hospitalar. Ex-CEO de redes hospitalares, traz a visão clínica e executiva para projetos de alta complexidade e gestão de equipes médicas.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-section-padding-mobile px-gutter bg-surface-container-low border-y border-outline-variant/30">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Fique por dentro da gestão de excelência.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Assine nossa Newsletter Estratégica.</p>
+<form class="flex flex-col sm:flex-row gap-4 p-2 bg-background rounded-2xl shadow-sm border border-outline-variant">
+<input class="flex-1 px-6 py-4 rounded-xl border-none focus:ring-2 focus:ring-secondary/20 bg-transparent text-on-surface" placeholder="Seu melhor e-mail corporativo" type="email"/>
+<button class="bg-secondary text-on-primary font-body-md text-body-md px-10 py-4 rounded-xl hover:opacity-90 transition-opacity" type="submit">
+                        Inscrever-se
+                    </button>
+</form>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-padding-desktop px-gutter bg-surface" id="contato">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Pronto para elevar o padrão da sua empresa?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Preencha o formulário e nossa equipe de especialistas entrará em contato para um diagnóstico inicial gratuito.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<p class="font-body-md text-body-md">contato@aliadosaude.com.br</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<p class="font-body-md text-body-md">+55 (11) 95076-5752</p>
+</div>
+</div>
+</div>
+<div class="bg-background p-12 rounded-[40px] shadow-2xl border border-outline-variant/30">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-2">Nome</label>
+<input class="w-full bg-slate-100 border-slate-200 rounded-xl px-4 py-3 focus:border-secondary focus:ring-secondary/10" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-2">Instituição</label>
+<input class="w-full bg-slate-100 border-slate-200 rounded-xl px-4 py-3 focus:border-secondary focus:ring-secondary/10" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-2">E-mail Corporativo</label>
+<input class="w-full bg-slate-100 border-slate-200 rounded-xl px-4 py-3 focus:border-secondary focus:ring-secondary/10" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase ml-2">Mensagem</label>
+<textarea class="w-full bg-slate-100 border-slate-200 rounded-xl px-4 py-3 focus:border-secondary focus:ring-secondary/10" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-body-md text-body-md hover:scale-[1.01] active:scale-95 transition-all shadow-lg">
+                            Enviar Solicitação
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-gutter py-16">
+<div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+<div class="max-w-xs">
+<img alt="Logo" class="h-10 mb-6" src="logo.png"/>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Aliado Saúde: Excelência estratégica e operacional para instituições de saúde que valorizam a vida e a sustentabilidade.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Menu</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Início</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#solucoes">Soluções</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#atuacao">Atuação</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#sobre">Sobre Nós</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Institucional</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Políticas</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Termos de Uso</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Privacidade</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-6">Siga-nos</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#">
+<img alt="LinkedIn" class="w-5 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_CK2vq_Xrcf5aZTOOxDw4obCmZZ4WiXnBkFxRPeYr4O0IbkRxJAhtq2u4f1wC_uRykMrBxfs5khjyEFvBQTVxmbIHu5r9YVtknh6GBrJo3vtpMBgL_eXxUGu3RFzoICvavYc12QjfTBWfWRxzrfc0Tlly9pnzupE5e2VP77l_UKuHXNQVHZybmEEdQ-uwDZHK37qh-fTINubwVg6i0a0sXGRKLTY9KnYwQrd3xBE9889VMvCiCwp2L3TNxRIqP_k2beeud6FArOEe"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#">
+<img alt="Instagram" class="w-5 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Ih6o4M6d6ls4cXrZPbFKE6y5SpyZqqCKeEJd_2OrAgfGWYcNaMv6FINkZttJh_bUUmQzr698IEbhVxiWGW9ndzvr4LGcH5u6TxPqtEM04ckWy0mnExbefO5FYutTA-xsO-ZkQ_GAtVJA7HBEEtt4b0mODSoumm9bJNJH2tbTAGtr_Az3y--oAbFsJ_y1JgbLqSg7smzlQk9su0qt6512JxsgtMyL0P4WPhAka9hXFeQTJd5DXACMCVvd3lvw7Gll8m4Hzno1W4ZQ"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                    © 2024 Aliado Saúde. Excelência Estratégica em Saúde. Todos os direitos reservados.
+                </p>
+<div class="flex gap-8 font-body-md text-body-md text-on-surface-variant opacity-60">
+<span>Brasil</span>
+<span>Suporte Internacional</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp FAB -->
+<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center gap-2 group" href="https://wa.me/5511950765752" target="_blank">
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 font-bold whitespace-nowrap px-0 group-hover:px-2">Falar agora</span>
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 2.983 1.277 4.591 1.278 4.877 0 8.846-3.968 8.849-8.846.001-2.362-.92-4.582-2.594-6.255-1.675-1.674-3.896-2.593-6.258-2.593-4.879 0-8.848 3.968-8.851 8.848 0 1.702.483 3.364 1.397 4.819l-.999 3.647 3.734-.98-.129.072zm8.915-4.959c-.285-.143-1.688-.832-1.948-.927-.261-.095-.45-.143-.64.143-.188.286-.732.927-.897 1.117-.166.19-.332.214-.617.071-.285-.143-1.204-.444-2.293-1.415-.848-.756-1.42-1.689-1.586-1.975-.166-.285-.018-.439.125-.581.127-.128.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.048-.357-.024-.5-.071-.143-.64-1.543-.876-2.115-.23-.553-.463-.478-.64-.488-.164-.008-.354-.01-.544-.01s-.498.071-.758.356c-.261.285-.997.975-.997 2.378 0 1.403 1.022 2.758 1.165 2.948.143.19 2.012 3.073 4.873 4.312.681.295 1.212.471 1.625.602.683.217 1.305.187 1.796.114.547-.082 1.688-.69 1.925-1.355.237-.665.237-1.237.166-1.356-.07-.12-.259-.19-.544-.333z"></path></svg>
+</a>
+<script>
+        // Micro-interactions and scroll handling
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>
